@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ElementWrapperCreator.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package sortpom.wrapper;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.jdom.Element;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import sortpom.parameter.DependencySortOrder;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import sortpom.parameter.PluginParameters;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import sortpom.wrapper.content.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static sortpom.wrapper.ElementUtil.*;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author bjorn</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 2012-05-19</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class ElementWrapperCreator {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private DependencySortOrder sortDependencies;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private DependencySortOrder sortPlugins;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean sortProperties;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean sortModules;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    </span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final ElementSortOrderMap elementNameSortOrderMap;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    ElementWrapperCreator(ElementSortOrderMap elementNameSortOrderMap) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.elementNameSortOrderMap = elementNameSortOrderMap;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void setup(PluginParameters pluginParameters) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sortDependencies = pluginParameters.sortDependencies;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sortPlugins = pluginParameters.sortPlugins;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sortProperties = pluginParameters.sortProperties;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.sortModules = pluginParameters.sortModules;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    Wrapper&#60;Element&#62; createWrapper(Element element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        boolean sortedBySortOrderFile = elementNameSortOrderMap.containsElement(element);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_36'/>
+36
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_36'>1</a>
+<span>
+
+1. createWrapper : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (sortedBySortOrderFile) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_37'/>
+37
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_37'>1</a>
+<span>
+
+1. createWrapper : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (isDependencyElement(element)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                DependencySortedWrapper dependencySortedWrapper = new DependencySortedWrapper(element, elementNameSortOrderMap.getSortOrder(element));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_39'/>
+39
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_39'>1</a>
+<span>
+
+1. createWrapper : removed call to sortpom/wrapper/content/DependencySortedWrapper::setSortOrder &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                dependencySortedWrapper.setSortOrder(sortDependencies);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_40'/>
+40
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_40'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return dependencySortedWrapper;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_42'/>
+42
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_42'>1</a>
+<span>
+
+1. createWrapper : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (isPluginElement(element)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                PluginSortedWrapper pluginSortedWrapper = new PluginSortedWrapper(element, elementNameSortOrderMap.getSortOrder(element));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_44'/>
+44
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_44'>1</a>
+<span>
+
+1. createWrapper : removed call to sortpom/wrapper/content/PluginSortedWrapper::setSortOrder &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                pluginSortedWrapper.setSortOrder(sortPlugins);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_45'/>
+45
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_45'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return pluginSortedWrapper;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_47'/>
+47
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_47'>1</a>
+<span>
+
+1. createWrapper : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if(isModuleElement(element)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_48'/>
+48
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_48'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                return new ModuleSortedWrapper(element, elementNameSortOrderMap.getSortOrder(element));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_50'/>
+50
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_50'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return new SortedWrapper(element, elementNameSortOrderMap.getSortOrder(element));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_52'/>
+52
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_52'>1</a>
+<span>
+
+1. createWrapper : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (isPropertyElement(element)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_53'/>
+53
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_53'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return new AlphabeticalSortedWrapper(element);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_55'/>
+55
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_55'>1</a>
+<span>
+
+1. createWrapper : mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new UnsortedWrapper&#60;&#62;(element);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean isDependencyElement(final Element element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_59'/>
+59
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_59'>1</a>
+<span>
+
+1. isDependencyElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (sortDependencies.isNoSorting()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_60'/>
+60
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_60'>1</a>
+<span>
+
+1. isDependencyElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_62'/>
+62
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_62'>3</a>
+<span>
+
+1. isDependencyElement : negated conditional &rarr; KILLED<br/>
+
+2. isDependencyElement : negated conditional &rarr; KILLED<br/>
+
+3. isDependencyElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return isElementName(element, &#34;dependency&#34;) &#38;&#38; isElementParentName(element, &#34;dependencies&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_63'/>
+63
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_63'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_65'/>
+65
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_65'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean isPluginElement(final Element element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_66'/>
+66
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_66'>1</a>
+<span>
+
+1. isPluginElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (sortPlugins.isNoSorting()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_67'/>
+67
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_67'>1</a>
+<span>
+
+1. isPluginElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_69'>1</a>
+<span>
+
+1. isPluginElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (isElementName(element, &#34;plugin&#34;)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_70'/>
+70
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_70'>3</a>
+<span>
+
+1. isPluginElement : negated conditional &rarr; KILLED<br/>
+
+2. isPluginElement : negated conditional &rarr; KILLED<br/>
+
+3. isPluginElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return isElementParentName(element, &#34;plugins&#34;) || isElementParentName(element, &#34;reportPlugins&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_72'/>
+72
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_72'>1</a>
+<span>
+
+1. isPluginElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_74'/>
+74
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_74'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_75'/>
+75
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_75'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean isModuleElement(final Element element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_76'/>
+76
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_76'>1</a>
+<span>
+
+1. isModuleElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (!sortModules) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_77'/>
+77
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_77'>1</a>
+<span>
+
+1. isModuleElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_78'/>
+78
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_78'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_79'/>
+79
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_79'>3</a>
+<span>
+
+1. isModuleElement : negated conditional &rarr; KILLED<br/>
+
+2. isModuleElement : negated conditional &rarr; KILLED<br/>
+
+3. isModuleElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return isElementName(element, &#34;module&#34;) &#38;&#38; isElementParentName(element, &#34;modules&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_82'/>
+82
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_82'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private boolean isPropertyElement(final Element element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_83'/>
+83
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_83'>1</a>
+<span>
+
+1. isPropertyElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (!sortProperties) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_84'/>
+84
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_84'>1</a>
+<span>
+
+1. isPropertyElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return false;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String deepName = getDeepName(element);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_87'/>
+87
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_87'>1</a>
+<span>
+
+1. isPropertyElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        boolean inTheRightPlace = deepName.startsWith(&#34;/project/properties/&#34;)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_88'/>
+88
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_88'>1</a>
+<span>
+
+1. isPropertyElement : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>                || deepName.startsWith(&#34;/project/profiles/profile/properties/&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_89'/>
+89
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_89'>3</a>
+<span>
+
+1. isPropertyElement : negated conditional &rarr; KILLED<br/>
+
+2. isPropertyElement : negated conditional &rarr; KILLED<br/>
+
+3. isPropertyElement : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return inTheRightPlace &#38;&#38; isElementParentName(element, &#34;properties&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_90'/>
+90
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_90'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5b0835cb_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_92'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_36'>36</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_36'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldNotAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_37'>37</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_37'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_39'>39</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_39'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> removed call to sortpom/wrapper/content/DependencySortedWrapper::setSortOrder &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_40'>40</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_40'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_42'>42</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_42'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_44'>44</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_44'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> removed call to sortpom/wrapper/content/PluginSortedWrapper::setSortOrder &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_45'>45</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_45'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_47'>47</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_47'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldNotAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_48'>48</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_48'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_50'>50</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_50'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.ExpandEmptyElementTest.trueExpandedParameterAndTrueExpandedElementShouldNotAffectVerify(sortpom.verify.ExpandEmptyElementTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_52'>52</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_52'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.wrapper.CustomSortOrderFileTest.compareDefaultSortOrderFileToString(sortpom.wrapper.CustomSortOrderFileTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_53'>53</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_53'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_55'>55</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_55'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>createWrapper<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldNotAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> mutated return of Object value for sortpom/wrapper/ElementWrapperCreator::createWrapper to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_59'>59</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_59'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isDependencyElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_60'>60</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_60'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isDependencyElement<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_62'>62</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_62'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isDependencyElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isDependencyElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isDependencyElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_66'>66</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_66'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_67'>67</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_67'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_70'>70</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_70'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.sort.ReportPluginsTest.sortReportPluginsByGroupIdWithCustomSortOrderFileShouldWork(sortpom.sort.ReportPluginsTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_72'>72</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_72'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPluginElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_76'>76</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_76'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isModuleElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_77'>77</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_77'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isModuleElement<br/><b>Killed by : </b>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldNotAffectVerify(sortpom.verify.XmlProcessorTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_79'>79</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_79'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isModuleElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isModuleElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isModuleElement<br/><b>Killed by : </b>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_83'>83</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_83'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.namedParametersInSortFileShouldNotAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_84'>84</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_84'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.wrapper.CustomSortOrderFileTest.compareDefaultSortOrderFileToString(sortpom.wrapper.CustomSortOrderFileTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_87'>87</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_87'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_88'>88</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_88'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.sort.SortPropertiesTest.sortingOfFullPomFileShouldWork(sortpom.sort.SortPropertiesTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5b0835cb_89'>89</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5b0835cb_89'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isPropertyElement<br/><b>Killed by : </b>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>sortpom.verify.SortPropertiesTest.sortingOfFullPomFileShouldAffectVerify(sortpom.verify.SortPropertiesTest) (8 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlSimpleShouldAffectVerify(sortpom.verify.SortOrderTest) (12 ms)</li><li>sortpom.sort.MultiThreadTest.multipleSortingsShouldNotInterfereWithEachOther(sortpom.sort.MultiThreadTest) (2538 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeCarriageReturn(sortpom.sort.KeepBlankLinesTest) (14 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlAttributes(sortpom.sort.XmlProcessorTest) (16 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullFromAlfabeticalOrderShouldAffectVerify(sortpom.verify.SortOrderTest) (37 ms)</li><li>sortpom.wrapper.CustomSortOrderFileTest.compareDefaultSortOrderFileToString(sortpom.wrapper.CustomSortOrderFileTest) (19 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreserved2(sortpom.sort.KeepBlankLinesTest) (41 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlShouldNotAffectVerify2(sortpom.verify.KeepBlankLinesTest) (4 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreserved1(sortpom.sort.KeepBlankLinesTest) (19 ms)</li><li>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldNotAffectVerify(sortpom.verify.XmlProcessorTest) (4 ms)</li><li>sortpom.verify.MultiThreadTest.multipleSortingsShouldNotInterfereWithEachOther(sortpom.verify.MultiThreadTest) (1717 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortPluginsFalseMessageShouldWork(sortpom.sort.SortDependenciesTest) (83 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortDependenciesFalseMessageShouldWork(sortpom.sort.SortDependenciesTest) (248 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithIndentShouldNotAffectVerify(sortpom.verify.SortOrderTest) (11 ms)</li><li>sortpom.sort.KeepTrailingCommentsTest.commentsInIgnoreSectionShouldNotBeFormatted(sortpom.sort.KeepTrailingCommentsTest) (59 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlSimple(sortpom.sort.SortOrderTest) (25 ms)</li><li>sortpom.sort.SortOrderFilesTest.custom1ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (71 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortDependenciesTrueMessageShouldWork(sortpom.sort.SortDependenciesTest) (66 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlAndIndentParameterShouldNotAffectVerify(sortpom.verify.KeepBlankLinesTest) (9 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlCharacterShouldAffectVerify(sortpom.verify.SortOrderTest) (16 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileContentShouldBeEncodedOnVerificationSort(sortpom.parameter.ViolationFileParameterTest) (125 ms)</li><li>sortpom.parameter.BackupFileExtensionParameterTest.emptyBackupFileExtensionShouldNotWork(sortpom.parameter.BackupFileExtensionParameterTest) (492 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeNewlines2(sortpom.sort.KeepBlankLinesTest) (9 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlShouldNotAffectVerify3(sortpom.verify.KeepBlankLinesTest) (9 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlFullFromAlphabeticalOrder(sortpom.sort.XmlProcessorTest) (8 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortSimpleShouldNotAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.sort.SortDependenciesTest.extraTagInDependenciesAndPluginShouldBeSortedFirst(sortpom.sort.SortDependenciesTest) (54 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedDefaultVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (22 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlMultilineComment(sortpom.sort.XmlProcessorTest) (18 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlComplexShouldNotAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlShouldNotAffectVerify(sortpom.verify.KeepBlankLinesTest) (6 ms)</li><li>sortpom.sort.ReportPluginsTest.sortReportPluginsByGroupIdWithCustomSortOrderFileShouldWork(sortpom.sort.ReportPluginsTest) (34 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlReal1ShouldAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.verify.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTestNotAffectVerify(sortpom.verify.SortPropertiesTest) (10 ms)</li><li>sortpom.verify.SortOrderFilesTest.unsortedCustomSortOrderShouldTriggerVerify(sortpom.verify.SortOrderFilesTest) (20 ms)</li><li>sortpom.sort.SortOrderFilesTest.defaultPredefinedSortOrderShouldWork(sortpom.sort.SortOrderFilesTest) (78 ms)</li><li>sortpom.sort.SortOrderFilesTest.xmlDeviationsShouldNotHarmPlugin(sortpom.sort.SortOrderFilesTest) (36 ms)</li><li>sortpom.verify.ExpandEmptyElementTest.falseExpandedParameterAndFalseExpandedElementShouldNotAffectVerify(sortpom.verify.ExpandEmptyElementTest) (9 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesNotEnabled(sortpom.sort.SortModulesTest) (36 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeCarriageReturnNewlines2(sortpom.sort.KeepBlankLinesTest) (9 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlReal1ShouldNotAffectVerify(sortpom.verify.SortOrderTest) (8 ms)</li><li>sortpom.sort.ReportPluginsTest.sortReportPluginsByArtifactIdWithCustomSortOrderFileShouldWork(sortpom.sort.ReportPluginsTest) (113 ms)</li><li>sortpom.verify.KeepBlankLinesTest.unsortedXmlAndIndentParameterShouldAffectVerify(sortpom.verify.KeepBlankLinesTest) (14 ms)</li><li>sortpom.sort.KeepBlankLinesTest.simpleLineBreaksShouldNotBePreserved(sortpom.sort.KeepBlankLinesTest) (17 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlFullFromAlfabeticalOrder(sortpom.sort.SortOrderTest) (84 ms)</li><li>sortpom.verify.SortOrderFilesTest.default100ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (31 ms)</li><li>sortpom.wrapper.ElementToStringTest.testToString(sortpom.wrapper.ElementToStringTest) (14 ms)</li><li>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest) (7 ms)</li><li>sortpom.verify.SortOrderFilesTest.custom1ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (42 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullFromAlfabeticalOrderShouldNotAffectVerify(sortpom.verify.SortOrderTest) (32 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeCarriageReturnNewlines(sortpom.sort.KeepBlankLinesTest) (10 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedWarnVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (10 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesAndExtraElementsShouldWork(sortpom.sort.SortModulesTest) (32 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileShouldBeCreatedOnVerificationStop(sortpom.parameter.ViolationFileParameterTest) (57 ms)</li><li>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldAffectVerify(sortpom.verify.XmlProcessorTest) (6 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlAndIndentParameterShouldNotAffectVerify2(sortpom.verify.KeepBlankLinesTest) (8 ms)</li><li>sortpom.sort.SortPropertiesTest.sortPropertyParameterShouldSortAlphabetically(sortpom.sort.SortPropertiesTest) (18 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlFull(sortpom.sort.SortOrderTest) (67 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeNewlines(sortpom.sort.KeepBlankLinesTest) (14 ms)</li><li>sortpom.verify.SortPropertiesTest.namedParametersInSortFileShouldAffectVerify(sortpom.verify.SortPropertiesTest) (8 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlCharacterl(sortpom.sort.SortOrderTest) (31 ms)</li><li>sortpom.verify.ExpandEmptyElementTest.trueExpandedParameterAndFalseExpandedElementShouldNotAffectVerify(sortpom.verify.ExpandEmptyElementTest) (12 ms)</li><li>sortpom.sort.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTest(sortpom.sort.SortPropertiesTest) (20 ms)</li><li>sortpom.verify.SortOrderFilesTest.defaultPredefinedSortOrderShouldWork(sortpom.verify.SortOrderFilesTest) (21 ms)</li><li>sortpom.verify.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTestAffectVerify(sortpom.verify.SortPropertiesTest) (12 ms)</li><li>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (10 ms)</li><li>sortpom.sort.SortOrderTest.testSortDifferentClassPath(sortpom.sort.SortOrderTest) (81 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedSortVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (20 ms)</li><li>sortpom.verify.SortOrderTest.testSortDifferentClassPathShouldAffectVerify(sortpom.verify.SortOrderTest) (25 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithIndent(sortpom.sort.SortOrderTest) (21 ms)</li><li>sortpom.sort.SortDependenciesTest.scopeInSortDependenciesShouldSortByScope(sortpom.sort.SortDependenciesTest) (26 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlCharacter(sortpom.sort.XmlProcessorTest) (5 ms)</li><li>sortpom.sort.SortOrderFilesTest.default100ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (72 ms)</li><li>sortpom.sort.SortPropertiesTest.namedParametersInSortFileShouldSortThemFirst(sortpom.sort.SortPropertiesTest) (37 ms)</li><li>sortpom.verify.ExpandEmptyElementTest.falseExpandedParameterAndTrueExpandedElementShouldNotAffectVerify(sortpom.verify.ExpandEmptyElementTest) (12 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithDependencySortSimple(sortpom.sort.SortOrderTest) (14 ms)</li><li>sortpom.verify.XmlProcessorTest.testSortXmlMultilineCommentShouldAffectVerify(sortpom.verify.XmlProcessorTest) (3 ms)</li><li>sortpom.sort.SortDependenciesTest.defaultGroupIdForPluginsShouldWork(sortpom.sort.SortDependenciesTest) (83 ms)</li><li>sortpom.verify.XmlProcessorTest.testSortXmlAttributesShouldNotAffectVerify(sortpom.verify.XmlProcessorTest) (3 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileWithParentDirectoryShouldBeCreatedOnVerificationWarn(sortpom.parameter.ViolationFileParameterTest) (58 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileCanBeOverwritten(sortpom.parameter.ViolationFileParameterTest) (163 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithDifferentNamesShouldAffectVerify(sortpom.verify.SortOrderTest) (17 ms)</li><li>sortpom.verify.SortOrderTest.testSortDifferentClassPathShouldNotAffectVerify(sortpom.verify.SortOrderTest) (28 ms)</li><li>sortpom.sort.SortOrderTest.testSortDifferentRelativePath(sortpom.sort.SortOrderTest) (74 ms)</li><li>sortpom.sort.KeepBlankLinesTest.allLineBreaksInXmlShouldBeCarriageReturn2(sortpom.sort.KeepBlankLinesTest) (12 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithDependencySortFull(sortpom.sort.SortOrderTest) (24 ms)</li><li>sortpom.verify.SortOrderFilesTest.recommended2008_06ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (24 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullShouldAffectVerify(sortpom.verify.SortOrderTest) (36 ms)</li><li>sortpom.verify.SortPropertiesTest.sortingOfFullPomFileShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (11 ms)</li><li>sortpom.sort.SortOrderFilesTest.recommended2008_06ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (71 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInSimplePomShouldBePreserved(sortpom.sort.KeepBlankLinesTest) (17 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlComplexShouldAffectVerify(sortpom.verify.SortOrderTest) (16 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreservedAndIndented2(sortpom.sort.KeepBlankLinesTest) (40 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreservedAndIndented1(sortpom.sort.KeepBlankLinesTest) (66 ms)</li><li>sortpom.verify.ExpandEmptyElementTest.trueExpandedParameterAndTrueExpandedElementShouldNotAffectVerify(sortpom.verify.ExpandEmptyElementTest) (4 ms)</li><li>sortpom.verify.VerifyOrderTest.sortedButUnformattedSortOrderShouldPass(sortpom.verify.VerifyOrderTest) (18 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlReal1(sortpom.sort.SortOrderTest) (30 ms)</li><li>sortpom.parameter.IgnoreLineSeparatorsTest.ignoringLineSeparatorsShouldNotSort(sortpom.parameter.IgnoreLineSeparatorsTest) (45 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlSimple(sortpom.sort.XmlProcessorTest) (12 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortPluginsTrueMessageShouldWork(sortpom.sort.SortDependenciesTest) (21 ms)</li><li>sortpom.verify.SortOrderFilesTest.default040ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (31 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.readOnlyViolationFileShouldReportError(sortpom.parameter.ViolationFileParameterTest) (294 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithSameNameShouldAffectVerify(sortpom.verify.SortOrderTest) (14 ms)</li><li>sortpom.sort.SortOrderFilesTest.default040ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (72 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortFullShouldAffectVerify(sortpom.verify.SortOrderTest) (17 ms)</li><li>sortpom.verify.SortOrderFilesTest.xmlDeviationsShouldNotHarmPlugin(sortpom.verify.SortOrderFilesTest) (10 ms)</li><li>sortpom.verify.KeepBlankLinesTest.simpleLineBreaksShouldNotAffectVerify(sortpom.verify.KeepBlankLinesTest) (11 ms)</li><li>sortpom.parameter.IgnoreLineSeparatorsTest.doNotIgnoreLineSeparatorsShouldSort(sortpom.parameter.IgnoreLineSeparatorsTest) (49 ms)</li><li>sortpom.sort.SortOrderFilesTest.correctCustomSortOrderShouldSortThePm(sortpom.sort.SortOrderFilesTest) (120 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlComplex(sortpom.sort.SortOrderTest) (28 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlReal1(sortpom.sort.XmlProcessorTest) (11 ms)</li><li>sortpom.sort.SortPropertiesTest.sortingOfFullPomFileShouldWork(sortpom.sort.SortPropertiesTest) (31 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesShouldWork(sortpom.sort.SortModulesTest) (32 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortFullShouldNotAffectVerify(sortpom.verify.SortOrderTest) (11 ms)</li><li>sortpom.verify.SortOrderFilesTest.sortedCustomSortOrderShouldNotTriggerVerify(sortpom.verify.SortOrderFilesTest) (22 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlSimpleShouldNotAffectVerify(sortpom.verify.SortOrderTest) (7 ms)</li><li>sortpom.sort.XmlProcessorTest.testSortXmlComplex(sortpom.sort.XmlProcessorTest) (6 ms)</li><li>sortpom.verify.SortPropertiesTest.namedParametersInSortFileShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (7 ms)</li><li>sortpom.verify.VerifyOrderTest.wrongSortedShouldNotPass(sortpom.verify.VerifyOrderTest) (10 ms)</li><li>sortpom.verify.KeepBlankLinesTest.unsortedXmlShouldAffectVerify(sortpom.verify.KeepBlankLinesTest) (9 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithDifferentChildrenShouldAffectVerify(sortpom.verify.SortOrderTest) (42 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedStopVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (11 ms)</li><li>sortpom.sort.SortOrderTest.sortedFileShouldNotBeSorted(sortpom.sort.SortOrderTest) (37 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlCharacterShouldNotAffectVerify(sortpom.verify.SortOrderTest) (7 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.5
+
+</body>
+</html>

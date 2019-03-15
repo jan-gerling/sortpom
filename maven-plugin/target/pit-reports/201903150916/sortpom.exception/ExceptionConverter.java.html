@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ExceptionConverter.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package sortpom.exception;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import org.apache.maven.plugin.MojoFailureException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Converts internal runtime FailureException in a method to a MojoFailureException in order to give nice output to</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * the Maven framework</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class ExceptionConverter {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final Runnable method;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    public ExceptionConverter(Runnable method) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        this.method = method;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public void executeAndConvertException() throws MojoFailureException {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        try {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_18'/>
+18
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_18'>1</a>
+<span>
+
+1. executeAndConvertException : removed call to java/lang/Runnable::run &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            method.run();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        } catch (FailureException fex) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_20'/>
+20
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_20'>1</a>
+<span>
+
+1. executeAndConvertException : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            if (fex.getCause() != null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                throw new MojoFailureException(fex.getMessage(), fex.getCause());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>                throw new MojoFailureException(fex.getMessage());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>            }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@444ebefd_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@444ebefd_18'>18</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_18'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>executeAndConvertException<br/><b>Killed by : </b>sortpom.exception.ExceptionConverterTest.failureExceptionShouldThrowMojoFailureException(sortpom.exception.ExceptionConverterTest)</span></span> removed call to java/lang/Runnable::run &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@444ebefd_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@444ebefd_20'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>executeAndConvertException<br/><b>Killed by : </b>sortpom.exception.ExceptionConverterTest.failureExceptionShouldKeepCause(sortpom.exception.ExceptionConverterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>sortpom.verify.VerifyMojoParametersTest.parameterSortOrderFileShouldEndUpInFileUtil(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterSortPropertiesShouldEndUpInWrapperFactoryImpl(sortpom.verify.VerifyMojoParametersTest) (1 ms)</li><li>sortpom.exception.ExceptionConverterTest.failureExceptionShouldThrowMojoFailureException(sortpom.exception.ExceptionConverterTest) (1 ms)</li><li>sortpom.VerifyMojoTest.thrownExceptionShouldBeConvertedToMojoExceptionInExecute(sortpom.VerifyMojoTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.expandEmptyElementsParameter(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterSortOrderFileShouldEndUpInFileUtil(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterSortModulesShouldEndUpInWrapperFactoryImpl(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.encodingParameter(sortpom.sort.SortMojoParametersTest) (3 ms)</li><li>sortpom.exception.ExceptionConverterTest.noExceptionShouldRunJustFine(sortpom.exception.ExceptionConverterTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.pomFileParameter(sortpom.verify.VerifyMojoParametersTest) (1 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterIndentBlankLineShouldEndUpInXmlProcessor(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.predefinedSortOrderParameter(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterSortModulesShouldEndUpInWrapperFactoryImpl(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.backupFileExtensionParameter(sortpom.sort.SortMojoParametersTest) (23 ms)</li><li>sortpom.VerifyMojoTest.executeShouldStartMojo(sortpom.VerifyMojoTest) (8 ms)</li><li>sortpom.sort.SortMojoParametersTest.predefinedSortOrderParameter(sortpom.sort.SortMojoParametersTest) (4 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.backupFileExtensionParameter(sortpom.verify.VerifyMojoParametersTest) (3 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterSortDependenciesShouldEndUpInElementWrapperCreator(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.lineSeparatorParameter(sortpom.verify.VerifyMojoParametersTest) (1 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterNrOfIndentSpaceShouldEndUpInXmlProcessor(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterVerifyFailShouldEndUpInXmlProcessor(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterSortPropertiesShouldEndUpInWrapperFactoryImpl(sortpom.sort.SortMojoParametersTest) (6 ms)</li><li>sortpom.sort.SortMojoParametersTest.pomFileParameter(sortpom.sort.SortMojoParametersTest) (7 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterNrOfIndentSpaceShouldEndUpInXmlProcessor(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterIndentBlankLineShouldEndUpInXmlProcessor(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.VerifyMojoTest.thrownExceptionShouldBeConvertedToMojoExceptionInSetup(sortpom.VerifyMojoTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterSortDependenciesShouldEndUpInElementWrapperCreator(sortpom.verify.VerifyMojoParametersTest) (3 ms)</li><li>sortpom.exception.ExceptionConverterTest.failureExceptionShouldKeepCause(sortpom.exception.ExceptionConverterTest) (9 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.expandEmptyElementsParameter(sortpom.verify.VerifyMojoParametersTest) (1 ms)</li><li>sortpom.SortMojoTest.thrownExceptionShouldBeConvertedToMojoException(sortpom.SortMojoTest) (18 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.createBackupFileParameter(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.encodingParameter(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.SortMojoTest.thrownExceptionShouldBeConvertedToMojoExceptionInSetup(sortpom.SortMojoTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.createBackupFileParameter(sortpom.sort.SortMojoParametersTest) (6 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterKeepBlankLineShouldEndUpInXmlProcessor(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.violationFilenameParameterShouldBeFound(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.lineSeparatorParameter(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterSortPluginsShouldEndUpInWrapperFactoryImpl(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.verify.VerifyMojoParametersTest.parameterSortPluginsShouldEndUpInWrapperFactoryImpl(sortpom.verify.VerifyMojoParametersTest) (2 ms)</li><li>sortpom.sort.SortMojoParametersTest.parameterKeepBlankLineShouldEndUpInXmlProcessor(sortpom.sort.SortMojoParametersTest) (2 ms)</li><li>sortpom.SortMojoTest.executeShouldStartMojo(sortpom.SortMojoTest) (356 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.5
+
+</body>
+</html>

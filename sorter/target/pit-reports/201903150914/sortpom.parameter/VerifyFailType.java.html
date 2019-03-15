@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>VerifyFailType.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package sortpom.parameter;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import sortpom.exception.FailureException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @author bjorn</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * @since 2012-08-11</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>public enum VerifyFailType {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    SORT, WARN, STOP;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    static VerifyFailType fromString(String verifyFail) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_13'/>
+13
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_13'>1</a>
+<span>
+
+1. fromString : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (verifyFail == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>            throw new FailureException(&#34;verifyFail must be either SORT, WARN or STOP. Was: null&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_16'/>
+16
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_16'>1</a>
+<span>
+
+1. fromString : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (&#34;SORT&#34;.equalsIgnoreCase(verifyFail)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_17'/>
+17
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_17'>1</a>
+<span>
+
+1. fromString : mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return SORT;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_19'/>
+19
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_19'>1</a>
+<span>
+
+1. fromString : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (&#34;WARN&#34;.equalsIgnoreCase(verifyFail)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_20'/>
+20
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_20'>1</a>
+<span>
+
+1. fromString : mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return WARN;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_22'/>
+22
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_22'>1</a>
+<span>
+
+1. fromString : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (&#34;STOP&#34;.equalsIgnoreCase(verifyFail)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_23'/>
+23
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_23'>1</a>
+<span>
+
+1. fromString : mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>            return STOP;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        throw new FailureException(&#34;verifyFail must be either SORT, WARN or STOP. Was: &#34; + verifyFail);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5c78f456_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_13'>13</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_13'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.sortIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_16'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.emptyValueIsNotOk(sortpom.parameter.VerifyFailParameterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_17'>17</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_17'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.sortIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest)</span></span> mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_19'>19</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_19'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.emptyValueIsNotOk(sortpom.parameter.VerifyFailParameterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_20'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.warnIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest)</span></span> mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_22'>22</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_22'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.emptyValueIsNotOk(sortpom.parameter.VerifyFailParameterTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5c78f456_23'>23</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5c78f456_23'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>fromString<br/><b>Killed by : </b>sortpom.parameter.VerifyFailParameterTest.stopIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest)</span></span> mutated return of Object value for sortpom/parameter/VerifyFailType::fromString to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>sortpom.verify.SortPropertiesTest.sortingOfFullPomFileShouldAffectVerify(sortpom.verify.SortPropertiesTest) (8 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlSimpleShouldAffectVerify(sortpom.verify.SortOrderTest) (12 ms)</li><li>sortpom.sort.MultiThreadTest.multipleSortingsShouldNotInterfereWithEachOther(sortpom.sort.MultiThreadTest) (2538 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullFromAlfabeticalOrderShouldAffectVerify(sortpom.verify.SortOrderTest) (37 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreserved2(sortpom.sort.KeepBlankLinesTest) (41 ms)</li><li>sortpom.verify.MultiThreadTest.multipleSortingsShouldNotInterfereWithEachOther(sortpom.verify.MultiThreadTest) (1717 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortPluginsFalseMessageShouldWork(sortpom.sort.SortDependenciesTest) (83 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortDependenciesFalseMessageShouldWork(sortpom.sort.SortDependenciesTest) (248 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithIndentShouldNotAffectVerify(sortpom.verify.SortOrderTest) (11 ms)</li><li>sortpom.sort.KeepTrailingCommentsTest.commentsInIgnoreSectionShouldNotBeFormatted(sortpom.sort.KeepTrailingCommentsTest) (59 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlSimple(sortpom.sort.SortOrderTest) (25 ms)</li><li>sortpom.sort.SortOrderFilesTest.custom1ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (71 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortDependenciesTrueMessageShouldWork(sortpom.sort.SortDependenciesTest) (66 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlCharacterShouldAffectVerify(sortpom.verify.SortOrderTest) (16 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileContentShouldBeEncodedOnVerificationSort(sortpom.parameter.ViolationFileParameterTest) (125 ms)</li><li>sortpom.parameter.BackupFileExtensionParameterTest.emptyBackupFileExtensionShouldNotWork(sortpom.parameter.BackupFileExtensionParameterTest) (492 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlShouldNotAffectVerify3(sortpom.verify.KeepBlankLinesTest) (9 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortSimpleShouldNotAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.sort.SortDependenciesTest.extraTagInDependenciesAndPluginShouldBeSortedFirst(sortpom.sort.SortDependenciesTest) (54 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedDefaultVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (22 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlComplexShouldNotAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.sort.ReportPluginsTest.sortReportPluginsByGroupIdWithCustomSortOrderFileShouldWork(sortpom.sort.ReportPluginsTest) (34 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlReal1ShouldAffectVerify(sortpom.verify.SortOrderTest) (10 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.stopIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest) (1 ms)</li><li>sortpom.verify.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTestNotAffectVerify(sortpom.verify.SortPropertiesTest) (10 ms)</li><li>sortpom.verify.SortOrderFilesTest.unsortedCustomSortOrderShouldTriggerVerify(sortpom.verify.SortOrderFilesTest) (20 ms)</li><li>sortpom.sort.SortOrderFilesTest.defaultPredefinedSortOrderShouldWork(sortpom.sort.SortOrderFilesTest) (78 ms)</li><li>sortpom.sort.SortOrderFilesTest.xmlDeviationsShouldNotHarmPlugin(sortpom.sort.SortOrderFilesTest) (36 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.wrongValueIsNotOk(sortpom.parameter.VerifyFailParameterTest) (1 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesNotEnabled(sortpom.sort.SortModulesTest) (36 ms)</li><li>sortpom.parameter.SortOrderFilesParameterTest.incorrectPredefinedSortOrderShouldThrowException(sortpom.parameter.SortOrderFilesParameterTest) (72 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.warnIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest) (1 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlReal1ShouldNotAffectVerify(sortpom.verify.SortOrderTest) (8 ms)</li><li>sortpom.sort.ReportPluginsTest.sortReportPluginsByArtifactIdWithCustomSortOrderFileShouldWork(sortpom.sort.ReportPluginsTest) (113 ms)</li><li>sortpom.parameter.EncodingParameterTest.illegalEncodingWhenGettingPomFileShouldNotWork(sortpom.parameter.EncodingParameterTest) (7 ms)</li><li>sortpom.verify.KeepBlankLinesTest.unsortedXmlAndIndentParameterShouldAffectVerify(sortpom.verify.KeepBlankLinesTest) (14 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlFullFromAlfabeticalOrder(sortpom.sort.SortOrderTest) (84 ms)</li><li>sortpom.verify.SortOrderFilesTest.default100ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (31 ms)</li><li>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldAffectVerify(sortpom.verify.SortPropertiesTest) (7 ms)</li><li>sortpom.verify.SortOrderFilesTest.custom1ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (42 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullFromAlfabeticalOrderShouldNotAffectVerify(sortpom.verify.SortOrderTest) (32 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedWarnVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (10 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesAndExtraElementsShouldWork(sortpom.sort.SortModulesTest) (32 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileShouldBeCreatedOnVerificationStop(sortpom.parameter.ViolationFileParameterTest) (57 ms)</li><li>sortpom.verify.KeepBlankLinesTest.emptyLinesInXmlAndIndentParameterShouldNotAffectVerify2(sortpom.verify.KeepBlankLinesTest) (8 ms)</li><li>sortpom.sort.SortPropertiesTest.sortPropertyParameterShouldSortAlphabetically(sortpom.sort.SortPropertiesTest) (18 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlFull(sortpom.sort.SortOrderTest) (67 ms)</li><li>sortpom.verify.SortPropertiesTest.namedParametersInSortFileShouldAffectVerify(sortpom.verify.SortPropertiesTest) (8 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlCharacterl(sortpom.sort.SortOrderTest) (31 ms)</li><li>sortpom.sort.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTest(sortpom.sort.SortPropertiesTest) (20 ms)</li><li>sortpom.parameter.SortOrderFilesParameterTest.incorrectCustomSortOrderShouldThrowException(sortpom.parameter.SortOrderFilesParameterTest) (48 ms)</li><li>sortpom.verify.SortOrderFilesTest.defaultPredefinedSortOrderShouldWork(sortpom.verify.SortOrderFilesTest) (21 ms)</li><li>sortpom.verify.SortPropertiesTest.testBothNamedParametersInSortFileAndSortPropertyParameterTestAffectVerify(sortpom.verify.SortPropertiesTest) (12 ms)</li><li>sortpom.verify.SortPropertiesTest.sortPropertyParameterShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (10 ms)</li><li>sortpom.sort.SortOrderTest.testSortDifferentClassPath(sortpom.sort.SortOrderTest) (81 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedSortVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (20 ms)</li><li>sortpom.verify.SortOrderTest.testSortDifferentClassPathShouldAffectVerify(sortpom.verify.SortOrderTest) (25 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithIndent(sortpom.sort.SortOrderTest) (21 ms)</li><li>sortpom.sort.SortDependenciesTest.scopeInSortDependenciesShouldSortByScope(sortpom.sort.SortDependenciesTest) (26 ms)</li><li>sortpom.sort.SortOrderFilesTest.default100ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (72 ms)</li><li>sortpom.sort.SortPropertiesTest.namedParametersInSortFileShouldSortThemFirst(sortpom.sort.SortPropertiesTest) (37 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithDependencySortSimple(sortpom.sort.SortOrderTest) (14 ms)</li><li>sortpom.sort.SortDependenciesTest.defaultGroupIdForPluginsShouldWork(sortpom.sort.SortDependenciesTest) (83 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileWithParentDirectoryShouldBeCreatedOnVerificationWarn(sortpom.parameter.ViolationFileParameterTest) (58 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.violationFileCanBeOverwritten(sortpom.parameter.ViolationFileParameterTest) (163 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithDifferentNamesShouldAffectVerify(sortpom.verify.SortOrderTest) (17 ms)</li><li>sortpom.sort.SortOrderTest.corruptFileShouldThrowException(sortpom.sort.SortOrderTest) (18 ms)</li><li>sortpom.verify.SortOrderTest.testSortDifferentClassPathShouldNotAffectVerify(sortpom.verify.SortOrderTest) (28 ms)</li><li>sortpom.sort.SortOrderTest.testSortDifferentRelativePath(sortpom.sort.SortOrderTest) (74 ms)</li><li>sortpom.sort.SortOrderTest.testSortWithDependencySortFull(sortpom.sort.SortOrderTest) (24 ms)</li><li>sortpom.verify.SortOrderFilesTest.recommended2008_06ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (24 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlFullShouldAffectVerify(sortpom.verify.SortOrderTest) (36 ms)</li><li>sortpom.verify.SortPropertiesTest.sortingOfFullPomFileShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (11 ms)</li><li>sortpom.sort.SortOrderFilesTest.recommended2008_06ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (71 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.emptyValueIsNotOk(sortpom.parameter.VerifyFailParameterTest) (1 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlComplexShouldAffectVerify(sortpom.verify.SortOrderTest) (16 ms)</li><li>sortpom.sort.KeepBlankLinesTest.emptyRowsInLargePomShouldBePreservedAndIndented2(sortpom.sort.KeepBlankLinesTest) (40 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.nullValueIsNotOk(sortpom.parameter.VerifyFailParameterTest) (0 ms)</li><li>sortpom.verify.VerifyOrderTest.sortedButUnformattedSortOrderShouldPass(sortpom.verify.VerifyOrderTest) (18 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlReal1(sortpom.sort.SortOrderTest) (30 ms)</li><li>sortpom.parameter.IgnoreLineSeparatorsTest.ignoringLineSeparatorsShouldNotSort(sortpom.parameter.IgnoreLineSeparatorsTest) (45 ms)</li><li>sortpom.sort.SortDependenciesTest.deprecatedSortPluginsTrueMessageShouldWork(sortpom.sort.SortDependenciesTest) (21 ms)</li><li>sortpom.verify.SortOrderFilesTest.default040ShouldWorkAsPredefinedSortOrder(sortpom.verify.SortOrderFilesTest) (31 ms)</li><li>sortpom.parameter.ViolationFileParameterTest.readOnlyViolationFileShouldReportError(sortpom.parameter.ViolationFileParameterTest) (294 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithSameNameShouldAffectVerify(sortpom.verify.SortOrderTest) (14 ms)</li><li>sortpom.parameter.VerifyFailParameterTest.sortIgnoreCaseValueIsOk(sortpom.parameter.VerifyFailParameterTest) (1 ms)</li><li>sortpom.sort.SortOrderFilesTest.default040ShouldWorkAsPredefinedSortOrder(sortpom.sort.SortOrderFilesTest) (72 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortFullShouldAffectVerify(sortpom.verify.SortOrderTest) (17 ms)</li><li>sortpom.verify.SortOrderFilesTest.xmlDeviationsShouldNotHarmPlugin(sortpom.verify.SortOrderFilesTest) (10 ms)</li><li>sortpom.parameter.IgnoreLineSeparatorsTest.doNotIgnoreLineSeparatorsShouldSort(sortpom.parameter.IgnoreLineSeparatorsTest) (49 ms)</li><li>sortpom.sort.SortOrderFilesTest.correctCustomSortOrderShouldSortThePm(sortpom.sort.SortOrderFilesTest) (120 ms)</li><li>sortpom.sort.SortOrderTest.testSortXmlComplex(sortpom.sort.SortOrderTest) (28 ms)</li><li>sortpom.sort.SortPropertiesTest.sortingOfFullPomFileShouldWork(sortpom.sort.SortPropertiesTest) (31 ms)</li><li>sortpom.sort.SortModulesTest.sortingOfPomFileWithSubmodulesShouldWork(sortpom.sort.SortModulesTest) (32 ms)</li><li>sortpom.verify.SortOrderTest.testSortWithDependencySortFullShouldNotAffectVerify(sortpom.verify.SortOrderTest) (11 ms)</li><li>sortpom.verify.SortOrderFilesTest.sortedCustomSortOrderShouldNotTriggerVerify(sortpom.verify.SortOrderFilesTest) (22 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlSimpleShouldNotAffectVerify(sortpom.verify.SortOrderTest) (7 ms)</li><li>sortpom.verify.SortPropertiesTest.namedParametersInSortFileShouldNotAffectVerify(sortpom.verify.SortPropertiesTest) (7 ms)</li><li>sortpom.verify.VerifyOrderTest.wrongSortedShouldNotPass(sortpom.verify.VerifyOrderTest) (10 ms)</li><li>sortpom.parameter.SortOrderFilesParameterTest.incorrectPredefinedSortOrderShouldThrowException2(sortpom.parameter.SortOrderFilesParameterTest) (31 ms)</li><li>sortpom.parameter.SortOrderFilesParameterTest.incorrectCustomSortOrderShouldThrowException2(sortpom.parameter.SortOrderFilesParameterTest) (38 ms)</li><li>sortpom.verify.SortOrderTest.sortedDependenciesWithDifferentChildrenShouldAffectVerify(sortpom.verify.SortOrderTest) (42 ms)</li><li>sortpom.verify.VerifyOrderTest.unsortedStopVerifyShouldPerformSort(sortpom.verify.VerifyOrderTest) (11 ms)</li><li>sortpom.sort.SortOrderTest.sortedFileShouldNotBeSorted(sortpom.sort.SortOrderTest) (37 ms)</li><li>sortpom.verify.SortOrderTest.testSortXmlCharacterShouldNotAffectVerify(sortpom.verify.SortOrderTest) (7 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.5
+
+</body>
+</html>

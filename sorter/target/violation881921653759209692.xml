@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sortpom>
+  <file filename="C:\Users\Jan\Desktop\sortpom\sorter\src\test\resources\testpom.xml">
+    <violation>The xml element &lt;modelVersion&gt; should be placed before &lt;parent&gt;</violation>
+  </file>
+</sortpom>
