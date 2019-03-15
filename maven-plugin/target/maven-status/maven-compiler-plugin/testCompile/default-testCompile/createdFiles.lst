@@ -1,0 +1,10 @@
+sortpom\VerifyMojo_ESTest_scaffolding.class
+sortpom\logger\MavenLogger_ESTest.class
+sortpom\SortMojo_ESTest.class
+sortpom\AbstractParentMojo_ESTest.class
+sortpom\VerifyMojo_ESTest.class
+sortpom\AbstractParentMojo_ESTest_scaffolding.class
+sortpom\exception\ExceptionConverter_ESTest.class
+sortpom\logger\MavenLogger_ESTest_scaffolding.class
+sortpom\exception\ExceptionConverter_ESTest_scaffolding.class
+sortpom\SortMojo_ESTest_scaffolding.class

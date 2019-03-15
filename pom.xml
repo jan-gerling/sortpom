@@ -346,6 +346,11 @@
       </plugin>
 
       <!-- Coverage -->
+	  <plugin>
+		<groupId>org.pitest</groupId>
+		<artifactId>pitest-maven</artifactId>
+		<version>1.4.5</version>
+	</plugin>	  
       <plugin>
         <groupId>org.eluder.coveralls</groupId>
         <artifactId>coveralls-maven-plugin</artifactId>

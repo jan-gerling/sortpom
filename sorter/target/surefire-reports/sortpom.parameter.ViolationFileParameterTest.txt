@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: sortpom.parameter.ViolationFileParameterTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.581 s - in sortpom.parameter.ViolationFileParameterTest

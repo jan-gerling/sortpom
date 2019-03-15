@@ -1,6 +1,5 @@
 .idea
 *.iml
-target
 release.properties
 idea-plugin/out
 .project
