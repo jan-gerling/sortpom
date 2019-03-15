@@ -1,0 +1,93 @@
+* Starting client
+* Connecting to master process on port 4578
+* Analyzing classpath: 
+  - C:\Users\Jan\Documents\sortpom\maven-plugin\target\classes
+  - C:\Users\Jan\Documents\sortpom\sorter\target\classes
+  - C:\Users\Jan\.m2\repository\org\jdom\jdom\1.1.3\jdom-1.1.3.jar
+  - C:\Users\Jan\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar
+  - C:\Users\Jan\.m2\repository\org\apache\maven\maven-plugin-api\3.6.0\maven-plugin-api-3.6.0.jar
+  - C:\Users\Jan\.m2\repository\org\apache\maven\maven-model\3.6.0\maven-model-3.6.0.jar
+  - C:\Users\Jan\.m2\repository\org\apache\maven\maven-artifact\3.6.0\maven-artifact-3.6.0.jar
+  - C:\Users\Jan\.m2\repository\org\apache\commons\commons-lang3\3.8.1\commons-lang3-3.8.1.jar
+  - C:\Users\Jan\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.plexus\0.3.3\org.eclipse.sisu.plexus-0.3.3.jar
+  - C:\Users\Jan\.m2\repository\javax\enterprise\cdi-api\1.0\cdi-api-1.0.jar
+  - C:\Users\Jan\.m2\repository\javax\annotation\jsr250-api\1.0\jsr250-api-1.0.jar
+  - C:\Users\Jan\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar
+  - C:\Users\Jan\.m2\repository\org\eclipse\sisu\org.eclipse.sisu.inject\0.3.3\org.eclipse.sisu.inject-0.3.3.jar
+  - C:\Users\Jan\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar
+  - C:\Users\Jan\.m2\repository\org\codehaus\plexus\plexus-utils\3.1.0\plexus-utils-3.1.0.jar
+  - C:\Users\Jan\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.5.2\plexus-classworlds-2.5.2.jar
+  - C:\Users\Jan\.m2\repository\org\apache\maven\plugin-tools\maven-plugin-annotations\3.6.0\maven-plugin-annotations-3.6.0.jar
+  - C:\Users\Jan\.m2\repository\junit\junit\4.12\junit-4.12.jar
+  - C:\Users\Jan\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
+  - C:\Users\Jan\.m2\repository\org\hamcrest\hamcrest-all\1.3\hamcrest-all-1.3.jar
+  - C:\Users\Jan\.m2\repository\com\github\ekryd\reflection-utils\reflection-utils\1.1.0\reflection-utils-1.1.0.jar
+  - C:\Users\Jan\.m2\repository\org\mockito\mockito-all\2.0.2-beta\mockito-all-2.0.2-beta.jar
+* Finished analyzing classpath
+* Generating tests for class sortpom.AbstractParentMojo
+* Test criteria:
+  - Line Coverage
+  - Branch Coverage
+  - Exception
+  - Mutation testing (weak)
+  - Method-Output Coverage
+  - Top-Level Method Coverage
+  - No-Exception Top-Level Method Coverage
+  - Context Branch Coverage
+* Setting up search algorithm for whole suite generation
+[MASTER] 12:38:12.669 [pool-2-thread-1] WARN  TestSuiteSerialization - Cannot load tests because file does not exist: C:\Users\Jan\Documents\sortpom\maven-plugin\.evosuite\evosuite-seeds\sortpom.AbstractParentMojo.seed
+* Loaded 0 tests from C:\Users\Jan\Documents\sortpom\maven-plugin\.evosuite\evosuite-seeds\sortpom.AbstractParentMojo.seed
+* Total number of test goals: 
+  - Line 7
+  - Branch 3
+  - Exception 0
+  - MutationFactory 9
+  - Output 0
+  - Method 1
+  - MethodNoException 1
+  - CBranchFitnessFactory 3
+* Using seed 1552477084900
+* Starting evolution
+[MASTER] 12:38:12.909 [pool-2-thread-1] WARN  TimeController - Phase INITIALIZATION lasted too long, 2 seconds more than allowed.
+* Search finished after 37s and 350 generations, 35434 statements, best individual has fitness: 2.833333333333333
+* Writing sequences to pool
+* Minimizing test suite
+* Going to analyze the coverage criteria
+* Coverage analysis for criterion LINE
+* Coverage of criterion LINE: 86%
+* Total number of goals: 7
+* Number of covered goals: 6
+* Coverage analysis for criterion BRANCH
+* Coverage of criterion BRANCH: 100%
+* Total number of goals: 3
+* Number of covered goals: 3
+* Coverage analysis for criterion EXCEPTION
+* Coverage of criterion EXCEPTION: 100%
+* Total number of goals: 2
+* Number of covered goals: 2
+* Coverage analysis for criterion WEAKMUTATION
+* Coverage of criterion WEAKMUTATION: 100%
+* Total number of goals: 9
+* Number of covered goals: 9
+* Coverage analysis for criterion OUTPUT
+* Coverage of criterion OUTPUT: 100% (no goals)
+* Coverage analysis for criterion METHOD
+* Coverage of criterion METHOD: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion METHODNOEXCEPTION
+* Coverage of criterion METHODNOEXCEPTION: 100%
+* Total number of goals: 1
+* Number of covered goals: 1
+* Coverage analysis for criterion CBRANCH
+* Coverage of criterion CBRANCH: 33%
+* Total number of goals: 3
+* Number of covered goals: 1
+* Generated 3 tests with total length 8
+* Resulting test suite's coverage: 90% (average coverage for all fitness functions)
+* Generating assertions
+* Resulting test suite's mutation score: 78%
+* Compiling and checking tests
+* Writing JUnit test case 'AbstractParentMojo_ESTest' to C:\Users\Jan\Documents\sortpom\maven-plugin\.evosuite\tmp_2019_03_13_12_34_03\tests
+* Done!
+
