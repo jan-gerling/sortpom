@@ -27,6 +27,12 @@
 
   <dependencies>
     <!-- Test dependencies -->
+	<dependency>
+	  <groupId>org.evosuite</groupId>
+	  <artifactId>evosuite-standalone-runtime</artifactId>
+	  <version>1.0.6</version>
+	  <scope>test</scope>
+	</dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
